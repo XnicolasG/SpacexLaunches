@@ -5,9 +5,9 @@ interface Props {
     img: string;
     success: boolean;
     flightNumber: number;
-    details: string | null
+    details: string | null;
 }
-const { id, success, img, flightNumber, details } = Astro.props;
+const { id, success, img, flightNumber, details, } = Astro.props;
 const successText = success ? "Éxito" : "Fracaso";
 ---
 
@@ -23,10 +23,10 @@ const successText = success ? "Éxito" : "Fracaso";
 
         <span 
         class:list={[
-            'text-xs font-semibold mr-2 px-2.5 py-0.5 rounded',
+            'text-sm font-semibold mr-2 px-2.5 py-0.5 rounded',
             {
-                'bg-green-200 text-green-900': success,
-                'bg-red-200 text-red-900': !success
+                'bg-green-400 text-green-900': success,
+                'bg-red-400 text-red-900': !success
             }
         ]}
         >{successText}</span>
